@@ -1,0 +1,14 @@
+<h1>Lista de empleados</h1>
+<!--<div *ngFor="let employee of employees; let i = index">-->
+    @for(employee of employees; track employee.id){
+        <app-carditem (employeeSelected)="onEmployeeSelected($event)" [employee]="employee"></app-carditem>
+    }
+    
+<!--</div>-->
+<!--<app-carditem (employeeSelected)="onEmployeeSelected($event)" [employee]="firstEmployee"></app-carditem>
+<app-carditem (employeeSelected)="onEmployeeSelected($event)" [employee]="secondEmployee"></app-carditem>
+<app-carditem (employeeSelected)="onEmployeeSelected($event)" [employee]="thirdEmployee"></app-carditem>
+<app-carditem (employeeSelected)="onEmployeeSelected($event)" [employee]="fourthEmployee"></app-carditem>-->
+
+
+<h4>Empleado seleccionado: {{selectedEmployee.name}}</h4>

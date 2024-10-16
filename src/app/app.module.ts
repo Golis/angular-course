@@ -8,6 +8,9 @@ import { FormsModule } from '@angular/forms';
 import { HelpcenterComponent } from './helpcenter/helpcenter.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LadingpageComponent } from './ladingpage/ladingpage.component';
+import { ListitemsComponent } from './listitems/listitems.component';
+import { CarditemComponent } from './carditem/carditem.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { FooterComponent } from './footer/footer.component';
     HelloWorldComponent,
     HelpcenterComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    LadingpageComponent,
+    ListitemsComponent,
+    CarditemComponent
   ],
   imports: [
     BrowserModule,
