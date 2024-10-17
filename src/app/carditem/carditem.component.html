@@ -1,13 +1,23 @@
-<div class="card">
-    <img src="{{employee.iconUrl}}" alt="Avatar" style="width:80%">
-    <div class="container">
-        <h4><b>{{employee.name}}</b></h4>
-        <p>{{employee.role}}</p>
+
+<!--@if (employee.isactive){-->
+<ng-container *ngIf="employee.isactive">
+    <div class="card">
+        <img src="{{employee.iconUrl}}" alt="Avatar" style="width:80%">
+        <div class="container">
+            <h4><b>{{employee.name}}</b></h4>
+            <p>{{employee.role}}</p>
+        </div>
+        <div>
+            <span [ngClass]="employee.rank">{{employee.rank}}</span>
+            <span [ngStyle]="onCheckRank(employee.rank)">{{employee.rank}}</span>
+        </div>
+        <div [ngSwitch]="employee.rank">
+            <span *ngSwitchCase="'junior'" class="junior">Necesita supervisión</span>
+            <span *ngSwitchCase="'senior'" class="senior">Lidera el equipo</span>
+        </div>
+        <button (click)="onEmployeeSelected()">Select Employee</button>
     </div>
-    <div>
-        <span>{{employee.rank}}</span>
-    </div>
-    <button (click)="onEmployeeSelected()">Select Employee</button>
-</div>
+</ng-container>
+<!--}-->
 
     

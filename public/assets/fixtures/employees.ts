@@ -6,7 +6,7 @@ export const employees: any = [
         iconUrl: "assets/img_avatar_chico.png",
         sex:"masculino",
         role: "Desarrollador software",
-        isactive:true,
+        isactive: false,
         rank: "junior"
     },
     {

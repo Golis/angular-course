@@ -15,4 +15,12 @@ export class CarditemComponent {
  onEmployeeSelected(){
   this.employeeSelected.emit(this.employee);
  }
+
+ onCheckRank(rank: string){
+  if(rank === "senior"){
+    return {'text-decoration': "underline"}
+  } else{
+    return null;
+  }
+ }
 }

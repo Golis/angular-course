@@ -1,7 +1,10 @@
 <h1>Lista de empleados</h1>
 <!--<div *ngFor="let employee of employees; let i = index">-->
     @for(employee of employees; track employee.id){
-        <app-carditem (employeeSelected)="onEmployeeSelected($event)" [employee]="employee"></app-carditem>
+        <app-carditem #component (employeeSelected)="onEmployeeSelected($event)" [employee]="employee">
+
+            
+        </app-carditem>
     }
     
 <!--</div>-->
@@ -12,3 +15,4 @@
 
 
 <h4>Empleado seleccionado: {{selectedEmployee.name}}</h4>
+<h4 #todayRef>Hoy: {{today | date: 'dd/MM/yyyy'}}</h4>
