@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LadingpageComponent } from './ladingpage/ladingpage.component';
 import { HelpcenterComponent } from './helpcenter/helpcenter.component';
 import { ListitemsComponent } from './listitems/listitems.component';
+import { DeeperDirectivesComponent } from './deeper-directives/deeper-directives.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'employees',
     component: ListitemsComponent
+  },
+  {
+    path: 'deeper-directives',
+    component: DeeperDirectivesComponent
   }
 ];
 

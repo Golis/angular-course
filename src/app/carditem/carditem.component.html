@@ -1,8 +1,17 @@
 
 <!--@if (employee.isactive){-->
+
+<ng-template class="card" #blankImage let-name="name">
+    <p>No hay imagen disponible para {{name}}</p>
+    <img src="assets/img_not_available.jpg" alt="Avatar no disponible" style="width:80%">
+</ng-template>
+
 <ng-container *ngIf="employee.isactive">
+    --------------------------
+    <ng-content></ng-content>
     <div class="card">
-        <img src="{{employee.iconUrl}}" alt="Avatar" style="width:80%">
+        <ng-container *ngIf="!employee.iconUrl"><ng-container *ngTemplateOutlet="blankImage; context: {name: employee.name}"></ng-container></ng-container>
+        <img *ngIf="employee.iconUrl" src="{{employee.iconUrl}}" alt="Avatar" style="width:80%">
         <div class="container">
             <h4><b>{{employee.name}}</b></h4>
             <p>{{employee.role}}</p>
@@ -17,6 +26,8 @@
         </div>
         <button (click)="onEmployeeSelected()">Select Employee</button>
     </div>
+    <ng-content select=".content2"></ng-content>
+    <ng-content select=".content1"></ng-content>
 </ng-container>
 <!--}-->
 

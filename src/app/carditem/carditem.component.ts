@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ContentChild, ContentChildren, EventEmitter, Input, Output, ViewChild, viewChild } from '@angular/core';
 import { Employee } from '../../models/employee';
 
 @Component({
@@ -10,7 +10,7 @@ export class CarditemComponent {
  @Input () employee:any;
  @Output ()
  employeeSelected = new EventEmitter<Employee>();
-
+ @ContentChildren('employeeContent1') employeeContent1:any;
 
  onEmployeeSelected(){
   this.employeeSelected.emit(this.employee);
@@ -23,4 +23,11 @@ export class CarditemComponent {
     return null;
   }
  }
+
+ ngAfterViewInit(){
+  console.log("Contenido del employeeContent1");
+  console.log(this.employeeContent1);
+ }
+
+
 }

@@ -13,7 +13,7 @@ export const employees: any = [
         id: 2,
         name: "Aaron",
         description: "Arquitecto de Hack A Boss",
-        iconUrl: "assets/img_avatar_chico.png",
+        //iconUrl: "assets/img_avatar_chico.png",
         sex:"masculino",
         role: "Arquitecto software",
         isactive:true,

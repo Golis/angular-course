@@ -11,6 +11,9 @@ import { FooterComponent } from './footer/footer.component';
 import { LadingpageComponent } from './ladingpage/ladingpage.component';
 import { ListitemsComponent } from './listitems/listitems.component';
 import { CarditemComponent } from './carditem/carditem.component';
+import { DeeperDirectivesComponent } from './deeper-directives/deeper-directives.component';
+import { HighlightedDirective } from './directives/highlighted.directive';
+import { NgxUnlessDirective } from './directives/ngx-unless.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CarditemComponent } from './carditem/carditem.component';
     HeaderComponent,
     LadingpageComponent,
     ListitemsComponent,
-    CarditemComponent
+    CarditemComponent,
+    DeeperDirectivesComponent,
+    HighlightedDirective,
+    NgxUnlessDirective
   ],
   imports: [
     BrowserModule,
