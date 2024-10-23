@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-deeper-directives',
   templateUrl: './deeper-directives.component.html',
-  styleUrl: './deeper-directives.component.css'
+  styleUrl: './deeper-directives.component.css',
 })
 export class DeeperDirectivesComponent {
 
